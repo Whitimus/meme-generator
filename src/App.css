@@ -1,38 +1,123 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+	background: #fff;
+	-webkit-font-smoothing: antialiased;
+	margin: 0;
+	padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* body,
+input,
+button {
+	font-size: ;
+	font-family: ;
+} */
+
+button {
+	cursor: pointer;
+}
+img,
+picture,
+figure {
+	width: 100%;
+}
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	background: linear-gradient(90deg, #672280 0%, #a626d3 100%);
+}
+.logo-container {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+.meme-container {
+	width: 65%;
+	margin: auto;
+}
+/* header */
+.logo {
+	width: 60px;
+	margin-left: 2em;
+	margin-right: 1em;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.title {
+	font-size: 3rem;
+}
+.subtitle {
+	margin-right: clamp(1.5rem, 5vw + 1rem, 7em);
+	font-weight: 500;
+}
+/* form */
+.input-container {
+	display: inline-flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.meme-button,
+.meme-input {
+	padding: 1em;
+	border-radius: 10px;
+
+	border: 1px solid #717171;
+	box-shadow: 4px 8px 8px rgb(66, 65, 65);
+}
+.meme-input {
+	margin-top: 5rem;
+	width: 48%;
+}
+.meme-button {
+	width: 100%;
+	margin-top: 2em;
+
+	font-size: 1.5rem;
+	background: linear-gradient(90deg, #672280 0%, #a626d3 100%);
+	color: #fff;
+}
+.meme--image {
+	margin: 5rem auto;
+	max-width: 100%;
+	box-shadow: 0 0 8px rgb(66, 65, 65);
+}
+.meme {
+	position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+.meme--image {
+	max-width: 100%;
+	border-radius: 3px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.meme--text {
+	position: absolute;
+	width: 80%;
+	text-align: center;
+	left: 50%;
+	transform: translateX(-50%);
+	margin: 15px 0;
+	padding: 0 5px;
+	font-family: impact, sans-serif;
+	font-size: 2rem;
+	text-transform: uppercase;
+	color: white;
+	letter-spacing: 1px;
+	text-shadow: 2px 2px 0 #000, -2px -2px 0 #000, 2px -2px 0 #000,
+		-2px 2px 0 #000, 0 2px 0 #000, 2px 0 0 #000, 0 -2px 0 #000, -2px 0 0 #000,
+		2px 2px 5px #000;
+}
+
+.bottom {
+	bottom: 3.5em;
+}
+
+.top {
+	top: 3em;
 }
